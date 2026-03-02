@@ -79,7 +79,7 @@ const Custom404: React.FC = () => {
 
             if (isLogged && isLogged !== 'false' && user && user !== 'false' && token && token !== 'false') {
                 const { status, data } = (await consumerPublicAPI({
-                    url: `${process.env.NEXT_PUBLIC_API_URL}/users/me/`,
+                    url: `${process.env.NEXT_PUBLIC_API_URL}/api/users/me/`,
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }

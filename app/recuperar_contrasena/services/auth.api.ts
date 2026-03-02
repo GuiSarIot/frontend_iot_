@@ -14,7 +14,7 @@ import type {
 
 export async function loginRequest(body: RecoveryPasswordRequestBody) {
     return (await ConsumerPublicAPI({
-        url: `${process.env.NEXT_PUBLIC_API_URL}/login/autenticar`,
+        url: `${process.env.NEXT_PUBLIC_API_URL}/api/login/autenticar`,
         method: 'POST',
         body,
     })) as ConsumerAPIResult<RecoveryPasswordRequestData>
@@ -22,7 +22,7 @@ export async function loginRequest(body: RecoveryPasswordRequestBody) {
 
 export async function encryptUserId(id: string) {
     const res = (await ConsumerPublicAPI({
-        url: `${process.env.NEXT_PUBLIC_API_URL}/login/cifrarID/${id}`,
+        url: `${process.env.NEXT_PUBLIC_API_URL}/api/login/cifrarID/${id}`,
     })) as ConsumerAPIResult<string>
     return res.data
 }

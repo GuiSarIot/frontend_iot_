@@ -8,7 +8,7 @@
     width: 100vw;
     margin: 0;
     padding: 0;
-    background: --bg-primary;
+    background: var(--bg-primary);
     color: var(--text-primary);
     font-family: var(--font-family-base);
     box-sizing: border-box;
@@ -71,7 +71,7 @@
     font-size: 1.8rem;
     font-weight: 400;
     letter-spacing: 0.5px;
-    color: var(--secondary);
+    color: #334155;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -84,7 +84,7 @@
     display: block;
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: #475569;
     font-weight: 500;
 }
 
@@ -147,7 +147,7 @@
     right: 10px;
     background: transparent;
     border: none;
-    color: var(--text-secondary);
+    color: #64748b;
     cursor: pointer;
     padding: 0.5rem;
     display: flex;
@@ -167,7 +167,7 @@
 }
 
 .forgotPasswordLink {
-    color: var(--text-secondary);
+    color: #64748b;
     font-size: 0.85rem;
     text-decoration: none;
     transition: all 0.2s;
@@ -175,8 +175,27 @@
 }
 
 .forgotPasswordLink:hover {
-    color: var(--secondary);
+    color: #334155;
     text-decoration: underline;
+}
+
+[data-theme='dark'] .loginFormPanel {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+[data-theme='dark'] .loginFormContent {
+    color: #334155;
+}
+
+[data-theme='dark'] .loginInputContainer label,
+[data-theme='dark'] .forgotPasswordLink,
+[data-theme='dark'] .eyeButton {
+    color: #64748b;
+}
+
+[data-theme='dark'] .forgotPasswordLink:hover {
+    color: #334155;
 }
 
 /* Botones - usando variables del global */

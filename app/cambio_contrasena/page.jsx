@@ -76,7 +76,7 @@ const ResetPasswordForm = () => {
             })
 
             const { status, message } = await ConsumerPublicAPI({
-                url: `${process.env.NEXT_PUBLIC_API_URL}/reset-password`,
+                url: `${process.env.NEXT_PUBLIC_API_URL}/api/reset-password`,
                 method: 'POST',
                 body: {
                     ...inputValues,
